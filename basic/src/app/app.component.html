@@ -13,11 +13,17 @@
 
       <div>what is the value of counter? the values comes from an event: {{ counter }} </div>
     </section>
+
+    <section>
+      @defer {
+        <app-comments />
+      } @placeholder {
+        <p>future content of comments</p>
+      } @loading(minimum 2s) {
+        <p>loading ...</p>
+      }
+    </section>
   </div>
 </main>
 
-<!-- component directives @Component
-structural direcive ng if ng for etc
-attribute directives, input, style output or custom 
--->
 <router-outlet />

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @Component({
   selector:'app-user',
@@ -23,9 +24,11 @@ export class UserComponent {
   isNameEditable: boolean = true
 }
 
+
 @Component({
+standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, UserComponent, CounterComponent],
+  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
