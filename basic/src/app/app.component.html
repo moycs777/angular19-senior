@@ -8,6 +8,10 @@
       <button (click)="greet()">Say hi!</button>
 
       <div (mouseover)="onMOuseOver()">mouse over me</div>
+    
+      <app-counter (addEvent)="onAdd($event)" />
+
+      <div>what is the value of counter? the values comes from an event: {{ counter }} </div>
     </section>
   </div>
 </main>

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CounterComponent } from './counter/counter.component';
 
 @Component({
   selector:'app-user',
@@ -24,18 +25,24 @@ export class UserComponent {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UserComponent],
+  imports: [RouterOutlet, UserComponent, CounterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'basic';
+  counter = 0
 
   greet (): void {
     alert("Hi!!!!!")
   }
 
   onMOuseOver(): void {
-    alert("the mouse is over me")
+    // alert("the mouse is over me")
+  }
+
+  onAdd(count: number) {
+    console.log('Counter value:', count);
+    this.counter = count
   }
 }
