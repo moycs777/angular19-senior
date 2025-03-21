@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ImageComponentComponent } from './image-component/image-component.component';
@@ -29,7 +29,7 @@ export class UserComponent {
 @Component({
 standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, ImageComponentComponent],
+  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, ImageComponentComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
