@@ -3,10 +3,19 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector:'app-user',
-  template:'<h1>I am user</h1>',
+  template:`<h1>I am user am I logged? {{isUserLoggedIn}}</h1>
+    @if(isUserLoggedIn) {
+      <p>Yes</p>
+    }
+    @else {
+      <p>No</p>
+    }
+  `,
 
 })
-export class UserComponent {}
+export class UserComponent {
+  isUserLoggedIn: boolean = true
+}
 
 @Component({
   selector: 'app-root',
