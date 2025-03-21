@@ -1,2 +1,14 @@
 <p>Favorite nickname: {{ nickname }}</p>
 <input type="text" [(ngModel)]="nickname" />
+
+<section>
+    <form [formGroup]="profileForm">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Name" formControlName="name">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" formControlName="email">
+
+        <button [disabled]="profileForm.invalid" (click)="onSubmit()">Submit</button>
+    </form>
+</section>
