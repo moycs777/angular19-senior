@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ImageComponentComponent } from './image-component/image-component.component';
+import { UserService } from './services/user.service';
+import { WheaterService } from './services/wheater.service';
 
 @Component({
   selector:'app-user',
@@ -36,6 +38,12 @@ standalone: true,
 export class AppComponent {
   title = 'basic';
   counter = 0
+
+  userService = inject(UserService)
+
+  constructor(private wheaterService: WheaterService){
+    this.userService.sayHi()
+  }
 
   greet (): void {
     alert("Hi!!!!!")
