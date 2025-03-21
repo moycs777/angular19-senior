@@ -1,7 +1,6 @@
-
 <main class="main">
   <div class="content">
-    hello!! {{title}}
+    hello!! {{ title }}
     <section>
       <app-user name="Moises" />
 
@@ -9,10 +8,10 @@
       <button (click)="userService.sayHi()">Say hi from service!</button>
 
       <div (mouseover)="onMOuseOver()">mouse over me</div>
-    
+
       <app-counter (addEvent)="onAdd($event)" />
 
-      <div>what is the value of counter? the values comes from an event: {{ counter }} </div>
+      <div>what is the value of counter? the values comes from an event: {{ counter }}</div>
     </section>
 
     <section>
@@ -20,7 +19,7 @@
         <app-comments />
       } @placeholder {
         <p>future content of comments</p>
-      } @loading(minimum 2s) {
+      } @loading (minimum 2s) {
         <p>loading ...</p>
       }
     </section>
@@ -33,9 +32,9 @@
       <p>Pipe applied here:</p>
       <p>{{ fullName | uppercase }}</p>
 
-      <p>{{ currentDate | date:'medium' }}</p>
+      <p>{{ currentDate | date: 'medium' }}</p>
 
-      <p>Number with "decimal" {{ 1234.78898989 | number:"3.2-2" }}</p>
+      <p>Number with "decimal" {{ 1234.78898989 | number: '3.2-2' }}</p>
       <ul>
         <li>Date with "date" {{ birthday | date: 'medium' }}</li>
         <li>Currency with "currency" {{ cost | currency }}</li>

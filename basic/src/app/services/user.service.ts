@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
   constructor() {
-    console.log(' user service has been initialized')
-   }
+    console.log(' user service has been initialized');
+  }
 
-   sayHi() {
-    console.log('hi')
-   }
+  sayHi() {
+    console.log('hi');
+  }
 }

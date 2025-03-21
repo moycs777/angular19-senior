@@ -5,9 +5,8 @@ import { Component } from '@angular/core';
   selector: 'app-comments',
   imports: [],
   templateUrl: './comments.component.html',
-  styleUrl: './comments.component.scss'
+  styleUrl: './comments.component.scss',
 })
 export class CommentsComponent {
-  comments: string[] = ['Hello', 'World', 'Angular']
-
+  comments: string[] = ['Hello', 'World', 'Angular'];
 }
