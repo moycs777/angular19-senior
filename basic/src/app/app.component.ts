@@ -10,11 +10,15 @@ import { RouterOutlet } from '@angular/router';
     @else {
       <p>No</p>
     }
+
+    <p>edit my name:</p>
+    <div [contentEditable]="isNameEditable"></div>
   `,
 
 })
 export class UserComponent {
   isUserLoggedIn: boolean = true
+  isNameEditable: boolean = true
 }
 
 @Component({
