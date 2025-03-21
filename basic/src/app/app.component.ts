@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { CommentsComponent } from './comments/comments.component';
+import { ImageComponentComponent } from './image-component/image-component.component';
 
 @Component({
   selector:'app-user',
@@ -28,7 +29,7 @@ export class UserComponent {
 @Component({
 standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent],
+  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, ImageComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
