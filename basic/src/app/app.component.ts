@@ -29,4 +29,12 @@ export class UserComponent {
 })
 export class AppComponent {
   title = 'basic';
+
+  greet (): void {
+    alert("Hi!!!!!")
+  }
+
+  onMOuseOver(): void {
+    alert("the mouse is over me")
+  }
 }
