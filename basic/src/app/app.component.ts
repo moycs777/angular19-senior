@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector:'app-user',
-  template:`<h1>I am user am I logged? {{isUserLoggedIn}}</h1>
+  template:`<h1>I am {{name}} am I logged? {{isUserLoggedIn}}</h1>
     @if(isUserLoggedIn) {
       <p>Yes</p>
     }
@@ -17,6 +17,7 @@ import { RouterOutlet } from '@angular/router';
 
 })
 export class UserComponent {
+  @Input() name: string = "";
   isUserLoggedIn: boolean = true
   isNameEditable: boolean = true
 }
