@@ -6,6 +6,8 @@ import { ImageComponentComponent } from './image-component/image-component.compo
 import { UserService } from './services/user.service';
 import { WheaterService } from './services/wheater.service';
 import { CurrencyPipe, DatePipe, DecimalPipe, UpperCasePipe } from '@angular/common';
+import { StarPipe } from './pipes/star.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @Component({
   selector:'app-user',
@@ -34,7 +36,7 @@ standalone: true,
   selector: 'app-root',
   imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, 
     ImageComponentComponent, RouterLink, UpperCasePipe, DatePipe, DecimalPipe, 
-    CurrencyPipe],
+    CurrencyPipe, StarPipe, ReversePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
