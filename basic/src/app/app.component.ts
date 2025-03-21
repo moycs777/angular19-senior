@@ -5,6 +5,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { ImageComponentComponent } from './image-component/image-component.component';
 import { UserService } from './services/user.service';
 import { WheaterService } from './services/wheater.service';
+import { CurrencyPipe, DatePipe, DecimalPipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector:'app-user',
@@ -31,15 +32,20 @@ export class UserComponent {
 @Component({
 standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, ImageComponentComponent, RouterLink],
+  imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, 
+    ImageComponentComponent, RouterLink, UpperCasePipe, DatePipe, DecimalPipe, 
+    CurrencyPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  userService = inject(UserService)
   title = 'basic';
   counter = 0
-
-  userService = inject(UserService)
+  fullName = "moises alejandro serrano palacio"
+  currentDate = new Date()
+  birthday = new Date(1990, 0, 1)
+  cost = 4560.34;
 
   constructor(private wheaterService: WheaterService){
     this.userService.sayHi()

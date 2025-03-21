@@ -29,6 +29,20 @@
       <app-image-component />
     </section>
 
+    <section>
+      <p>Pipe applied here:</p>
+      <p>{{ fullName | uppercase }}</p>
+
+      <p>{{ currentDate | date:'medium' }}</p>
+
+      <p>Number with "decimal" {{ 1234.78898989 | number:"3.2-2" }}</p>
+      <ul>
+        <li>Date with "date" {{ birthday | date: 'medium' }}</li>
+        <li>Currency with "currency" {{ cost | currency }}</li>
+
+      </ul>
+    </section>
+
     <nav>
       <button routerLink="/">Home</button>
       <button routerLink="/profile">Profile</button>
