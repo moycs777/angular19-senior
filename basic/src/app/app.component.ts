@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { CommentsComponent } from './comments/comments.component';
@@ -8,6 +8,7 @@ import { WheaterService } from './services/wheater.service';
 import { CurrencyPipe, DatePipe, DecimalPipe, UpperCasePipe } from '@angular/common';
 import { StarPipe } from './pipes/star.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { SliderComponent } from './slider/slider.component';
 
 @Component({
   selector:'app-user',
@@ -36,7 +37,7 @@ standalone: true,
   selector: 'app-root',
   imports: [RouterOutlet, UserComponent, CounterComponent, CommentsComponent, 
     ImageComponentComponent, RouterLink, UpperCasePipe, DatePipe, DecimalPipe, 
-    CurrencyPipe, StarPipe, ReversePipe],
+    CurrencyPipe, StarPipe, ReversePipe, SliderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -48,6 +49,7 @@ export class AppComponent {
   currentDate = new Date()
   birthday = new Date(1990, 0, 1)
   cost = 4560.34;
+  gauge = signal(0)
 
   constructor(private wheaterService: WheaterService){
     this.userService.sayHi()
